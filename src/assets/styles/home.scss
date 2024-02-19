@@ -1,0 +1,143 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background-color: black;
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  &-form {
+    max-width: 640px;
+    width: 100%;
+    margin: 50px auto;
+    background: #424242;
+    padding: 20px;
+    border-radius: 10px;
+    
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      label {
+        color: white;
+      }
+  
+      div {
+        gap: 10px;
+      }
+
+      fieldset {
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+  
+      input {
+        font-size: 24px;
+        height: 50px;
+        padding: 0 20px;
+        border-radius: 8px;
+        border: none;
+        width: 100%;
+      }
+  
+      button {
+        cursor: pointer;
+        width: 100%;
+        height: 50px;
+
+        border: none;
+        border-radius: 8px;
+        
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        
+        background-color: $blue;
+        transition: ease-in-out 0.2s;
+
+        &:hover {
+          background: var(--primary-color-darker);
+        }
+        
+      }
+    }
+  }
+}
+
+.container-render {
+  background: #424242;
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 640px;
+  width: 100%;
+  height: 800px;
+  overflow: auto;
+  padding: 20px;
+
+  .renger-image {
+    position: relative;
+    padding: 3rem;
+    background-color: #313131;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+
+    &.copied {
+      &:hover {
+        cursor: pointer;
+  
+        &::before {
+          content: "Copiado!";
+          background-color: #026b226c;
+        }
+      }
+
+      &.copied-again {
+        &:hover {
+          &::before {
+            content: "Copiado novamente!";
+            background-color: #098d316c;
+          }
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::before {
+        content: "Clique para copiar";
+        background-color: rgba(0, 0, 0, 0.555);
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+
+        position: absolute;
+      }
+    }
+  }
+}
