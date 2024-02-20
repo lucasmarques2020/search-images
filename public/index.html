@@ -7,31 +7,38 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gerador de Imagens</title>
   <link rel="stylesheet" href="../public/assets/home.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <section class="container">
-    <h1 class="text-white">Insira o tamanho de suas imagens</h1>
-    <h3 class="text-white">Gere imagens mocks aleatórias para por em seus projetos de forma rápida!</h3>
-    <div class="container-form">
-      <form id="form-send-information" class="form-group flex__direction--column">
-        <fieldset>
-          <input type="text" placeholder="Ex: árvores" id="id-search">
-        </fieldset>
-        <div class="flex">
-          <fieldset>
-            <input type="number" placeholder="1360" id="id-width">
-          </fieldset>
-          <fieldset>
-            <input type="number" placeholder="768" id="id-height">
-          </fieldset>
+    <div class="container-wrapper">
+      <h1 class="text-white">Insira o tamanho de suas imagens</h1>
+      <h3 class="text-white">Gere imagens mocks aleatórias para por em seus projetos de forma rápida!</h3>
+      <div class="container-form">
+        <form id="form-send-information" class="form-group flex__direction--column">
+          <!-- <fieldset>
+            <input type="text" placeholder="Ex: árvores" id="id-search">
+          </fieldset> -->
+          <div class="flex fieldset-form">
+            <fieldset>
+              <input type="number" placeholder="1360" min="0" max="5000" id="id-width">
+              <label for="id-width">(px)</label>
+            </fieldset>
+            <fieldset>
+              <input type="number" placeholder="768" min="0" max="5000" id="id-height">
+              <label for="id-height">(px)</label>
+            </fieldset>
+          </div>
+          <button id="id-btn-form">Gerar</button>
+        </form>
+      </div>
+      <div class="flex flex--center-x flex--center-y container-render">
+        <div class="flex flex--center-x flex--center-y renger-image">
+          <p class="text-white">Sua imagem será gerada aqui!</p>
         </div>
-        <button id="id-btn-form">Gerar</button>
-      </form>
-    </div>
-    <div class="flex flex--center-x flex--center-y container-render">
-      <div class="flex flex--center-x flex--center-y renger-image">
-        <p class="text-white">Sua imagem será gerada aqui!</p>
       </div>
     </div>
   </section>
